@@ -1,6 +1,9 @@
 # vuetify-mermaid-test
 
-Demonstrate embedding mermaid diagrams in vuetify 3 components
+Demonstrate embedding [mermaid](https://mermaid.js.org/) diagrams in [Vuetify
+3](https://vuetifyjs.com/) components.
+
+See [MermaidTest.vue](./src/components/MermaidTest.vue) for details.
 
 ## Configuration
 
@@ -14,7 +17,9 @@ npm install
 ## Testing
 
 ```bash
-# assumes GNU make and chromium-browser are installed
+# assumes GNU make is installed and invokes chromium-browser by default
+# override the BROWSER variable if you wish to use a different browser
+# e.g. make BROWSER=firefox test
 make test
 ```
 

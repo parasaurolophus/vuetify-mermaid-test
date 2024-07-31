@@ -1,4 +1,8 @@
 <template>
+    <!--
+    since mermaid is initialized by an onMounted hook, the "mermaid" class just
+    works
+    -->
     <v-container>
         <v-row>
             <v-col>
@@ -48,6 +52,7 @@ import { useTheme } from 'vuetify'
 
 const theme = useTheme()
 
+// use onMounted to initialize mermaid
 onMounted(() => {
     mermaid.initialize({
         startOnLoad: true,
