@@ -26,20 +26,21 @@
 </template>
 
 <script setup>
-import { onMounted, onUpdated, ref } from "vue"
-import { useTheme } from 'vuetify'
+
+// initialize mermaid in App.vue
+
+import { onMounted, onUpdated, ref, watch } from "vue"
 import mermaid from 'mermaid'
 
-const theme = useTheme()
+const tab = ref(null)
 
 onMounted(initializeMermaid)
 onUpdated(initializeMermaid)
 
-const tab = ref(null)
-
 function initializeMermaid() {
   mermaid.initialize({
-    theme: theme.global.current.value.dark ? 'dark' : 'light',
+    theme: 'dark',
+    startOnLoad: false,
   })
 }
 </script>
